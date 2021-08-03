@@ -4,5 +4,102 @@
 	Add all your Custom Styled CSS here for New Styles or
 	Overwriting Default Theme Styles for Better Handling Updates
 -----------------------------------------------------------------*/
+*,
+*::before,
+*::after {
+  cursor: default;
+  user-select: none;
+}
 
+:root {
+  --main-color: #15cfa7;
+  /* --main-color: #cf1520; */
+}
 
+html {
+  scroll-behavior: smooth;
+}
+
+.grid-filter.flex-column {
+  border: 1px solid rgba(0, 0, 0, 0.07);
+  border-radius: 4px;
+}
+
+.grid-filter.flex-column,
+.grid-filter.flex-column li {
+  width: 100%;
+}
+
+.grid-filter.flex-column li a {
+  padding: 14px 20px;
+  font-size: 0.9375rem;
+  text-align: right;
+  border-left: 0;
+  border-radius: 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.07);
+}
+
+.grid-filter.flex-column li:first-child a {
+  border-radius: 4px 4px 0 0;
+}
+
+.grid-filter.flex-column li:last-child a {
+  border-bottom: 0;
+  border-radius: 0 0 4px 4px;
+}
+
+#copyrights > #author-2021 {
+  font-size: calc(0.1vw);
+}
+
+#page-title {
+  overflow: hidden;
+  margin: 0;
+}
+
+#glassy {
+  position: absolute;
+  top: 0;
+  height: 150%;
+  background: rgba(255, 255, 255, 0.3);
+  mix-blend-mode: overlay;
+  transform: skew(-20deg);
+  filter: blur(20);
+}
+
+#glassy:nth-child(1) {
+  width: 16vw;
+  /* left: 0; */
+  left: -500px;
+  transition: transform 1.8s cubic-bezier(0, 0.7, 0.55, 0.83);
+}
+#glassy:nth-child(2) {
+  width: 22vw;
+  /* left: 0; */
+  left: -500px;
+  transition: transform 1.8s cubic-bezier(0, 0.7, 0.55, 0.83) 0.15s;
+}
+
+#page-title:hover > #glassy {
+  transform: translateX(2500px);
+}
+
+/* #iso15189 {
+  filter: blur(2px);
+  transition: all 0.15s cubic-bezier(0.09, 0.27, 0.87, 0.32);
+} */
+
+#iso15189:hover {
+  pointer-events: all;
+  touch-action: auto;
+  filter: blur(1px);
+  cursor: pointer;
+}
+
+.round-box-icon {
+  transition: 0.3s;
+}
+
+.round-box-icon:hover {
+  filter: sepia();
+}
