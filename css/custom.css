@@ -7,7 +7,7 @@
 *,
 *::before,
 *::after {
-  cursor: default;
+  /* cursor: default; */
   user-select: none;
 }
 
